@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<cars>
+	<car>
+		<type>4</type>
+		<title>14</title>
+		<picture>dsf </picture>
+		<year>2011</year>
+		<probeg>4234</probeg>
+		<amount>1</amount>
+		<price>4324</price>
+	</car>
+</cars>

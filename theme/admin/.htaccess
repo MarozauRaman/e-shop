@@ -1,0 +1,11 @@
+<files .htaccess="">
+order allow,deny
+deny from all
+</files>
+AuthType Basic
+AuthName "This's admin's page"
+AuthUserFile Z:/home/localhost/www/shop/theme/admin/.htpasswd
+Require valid-user
+
+Satisfy all
+Options All -Indexes
