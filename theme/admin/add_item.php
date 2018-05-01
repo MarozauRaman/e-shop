@@ -11,7 +11,7 @@ $back=$_SERVER['HTTP_REFERER'];
 							(int)$amount=trim($_REQUEST['amount']);
  
  if (!preg_match("/[^-0-9]/", $title))  {
- 	if (!preg_match("/[^\:\/\.\_\-a-zA-Z0-9]/", $pic))  {
+ 	if (!preg_match("/[^\:\/\.\_\-a-zA-Z0-9]*[.][jpg|jpeg|png|gif]{3,4}/", $pic))  {
  		if (!preg_match("/[^0-9]/", $year)) {
  			if (!preg_match("/[^0-9]/", $probeg)) {
  				if (!preg_match("/[^0-9]/", $price)) {
