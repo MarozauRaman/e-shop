@@ -6,6 +6,15 @@ require("connect.php");
 							  (string)$id=($_REQUEST['delcust']);
 							  
 						 		if(isset($_POST["delcust"])){
+
+						 $sel1=mysql($dbName,"select goods_id from shop_cart where uid='{$id}'");
+						 			 					
+						 	 while($ii=mysql_fetch_array($sel1,MYSQL_NUM)){
+							 $sql24=mysql($dbName,"update instock set amount='1' where idinstock='".$ii[0]."'"); 
+								 					 
+							 }
+							 $sql3=mysql($dbName,"delete from shop_cart where uid='{$id}'");
+
 							 $idb=mysql($dbName,"select idbill from bill where idcustomer='{$id}'");
 							 while($ord=mysql_fetch_array($idb,MYSQL_NUM)) {
 							 
@@ -17,7 +26,8 @@ require("connect.php");
 							 $sql2=mysql($dbName,"update instock set amount='1' where idinstock='".$i[0]."'"); 
 								 					 
 							 }
-							 
+							
+						
 						  $sql="delete from receipt where idbill='".$ord[0]."'";
 						mysql_query($sql);
 							 
@@ -25,7 +35,8 @@ require("connect.php");
 							 mysql_query($sql1);
 							 }
 
-							 $delc=mysql($dbName,"delete from customer where idcustomer='{$id}'");
+
+							$delc=mysql($dbName,"delete from customer where idcustomer='{$id}'");
 							 echo "Покупатель $id удален!";
 							
 						 }

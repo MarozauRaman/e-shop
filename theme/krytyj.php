@@ -90,7 +90,7 @@ while($i=mysql_fetch_array($result1,MYSQL_NUM)){
                  <h3>
                   	<?php
 					mysql_set_charset('utf8');
-                  	$result=mysql($dbName,"select title from vagon join instock where instock.idinstock='".$i[0]."'");
+                  	$result=mysql($dbName,"select title from instock where instock.idinstock='".$i[0]."'");
 					  $num=mysql_num_rows($result);
 					  $j=0;
 					  while($j<$num){

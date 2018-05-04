@@ -8,7 +8,7 @@ require("connect.php");
 						 		if(isset($_POST["del"])){
 							 
 							 
-							  $sel=mysql($dbName,"select idinstock from receipt where idbill='{$ord}'");
+							  $sel=mysql($dbName,"select idvagon from receipt where idbill='{$ord}'");
 									$co=mysql_num_rows($sel);
 									
 						 	 while($i=mysql_fetch_array($sel,MYSQL_NUM)){

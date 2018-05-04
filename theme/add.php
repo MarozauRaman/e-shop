@@ -5,14 +5,14 @@ $uniq=$_SERVER['HTTP_USER_AGENT'].$_SERVER['LOCAL_ADDR'].$_SERVER['LOCAL_PORT'].
 $back=$_SERVER['HTTP_REFERER'];
 						  require("connect.php");
 						  
-							$id=trim($_REQUEST['btn']);
+							(int)$id=trim($_REQUEST['btn']);
 
 						 if(isset($_POST["btn"])){
-							 
-							 
-							 
-						  $sql="insert into shop_cart(uid,goods_id,amount) values ('{$uniq}','{$id}','1')";
-						mysql_query($sql);
+							 	 
+						   $sql1="insert into customer (idcustomer,Surname,Name,email,Phone,Country,City) values ('{$uniq}','','','','','','')";
+						mysql_query($sql1);
+						  $sql=mysql($dbName,"insert into shop_cart(uid,goods_id,amount) values ('{$uniq}','{$id}','1')");
+						  
 							 $del=mysql($dbName,"update instock set amount='0' where idinstock='{$id}'");
 							
 							
