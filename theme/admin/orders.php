@@ -68,7 +68,7 @@ include("connect.php");
     <!-- BEGIN HEADER -->
     <div class="header">
       <div class="container">
-        <a class="site-logo" href="shop-index.php"><img src="assets/corporate/img/logos/logo-shop.png"  class="img-thumbnail"></a>
+        <a class="site-logo" href="http://localhost/shop/theme/shop-index.php"><img src="assets/corporate/img/logos/logo-shop.png"  class="img-thumbnail"></a>
 
         <a href="javascript:void(0);" class="mobi-toggler"><em class="fa fa-bars"></em></a>
 
@@ -164,13 +164,14 @@ while($i=mysql_fetch_array($result1,MYSQL_NUM)){
 					  echo("<tr>id: $id</td><br/>");
 					  $j++;
 					  }
-            echo "Удалть покупателя:";
-	mysql_free_result($result);
+            	mysql_free_result($result);
 					  ?>
                 
                   </h3>
                  <form action="delete_customer.php"  method="post">
-             <input id="submit"  class="add2cart"  type="submit"  name="delcust" readonly value="<?php echo("$id"); ?>">
+                  <input type="hidden" name="am" value="<?php echo("$id"); ?>">
+
+             <input id="submit"  class="add2cart"  type="submit"  name="delcust" readonly value="Удалить пользователя">
                   </form>
                  
                           	<div>
@@ -257,10 +258,11 @@ while($i=mysql_fetch_array($result1,MYSQL_NUM)){
 					  (string)$ord=mysql_result($result,$j,'idbill');
 						  $res1=mysql_result($result,$j,'idvagon');
 					  echo("<tr>Order: $ord vagon: $res1</td><br/>");
-					echo("Удалить заказ:");	  
+  
 						?>
 				<form action="delete_order.php"  method="post">
-             <input id="submit"  class="add2cart"  type="submit"  name="del" readonly value="<?php echo("$ord"); ?>">
+           <input type="hidden" name="am" value="<?php echo("$ord"); ?>">
+             <input id="submit"  class="add2cart"  type="submit"  name="del" readonly value="удалить заказ">
                   </form>
 						<?php
 						

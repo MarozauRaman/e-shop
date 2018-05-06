@@ -3,7 +3,7 @@ $back=$_SERVER['HTTP_REFERER'];
 
 require("connect.php");
 							
-							  (string)$ord=($_REQUEST['del']);
+							  (string)$ord=($_REQUEST['am']);
 							  
 						 		if(isset($_POST["del"])){
 							 

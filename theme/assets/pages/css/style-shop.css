@@ -419,13 +419,11 @@ Header and header elements
 .product-item .add2cart {
 	float: right;
 	color: #a8aeb3;
-	background: #d7dde3 url(../../pages/img/icons/cart.png) no-repeat 50% 50%;
 	border: 1px #ededed solid;
 	padding: 3px 6px;
 }
 .product-item .add2cart:hover {
 	color: #fff !important;
-background: #E94D1C url(../../pages/img/icons/cart.png) no-repeat 50% 50%;
 	border-color: #E84D1C;
 }
 

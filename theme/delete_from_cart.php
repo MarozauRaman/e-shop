@@ -1,7 +1,7 @@
 <?php 
 $back=$_SERVER['HTTP_REFERER'];
 						  require("connect.php");
-						  	$id=trim($_REQUEST['btn1']);
+						  	$id=trim($_REQUEST['am']);
 						 if(isset($_POST["btn1"])){
 						  $sql="delete from shop_cart where goods_id='{$id}'";
 						mysql_query($sql);

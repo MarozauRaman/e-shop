@@ -163,13 +163,13 @@ while($i=mysql_fetch_array($result1,MYSQL_NUM)){
 					  $j++;
 					  }
 
-
                   ?>
+
                           	</div>
                           	
                    <form action="add.php"   method="post">
-                   <!-- <input type="number" name="am" placeholder="Amount" min="1"> -->
-                  	<input id="submit"  class="add2cart" type="submit"  name="btn"  readonly value="<?php echo("$i[0]"); ?>"><br/>
+                    <input type="hidden" name="am" value="<?php echo("$i[0]") ?>">
+                  	<input id="submit"  class="add2cart" type="submit"  name="btn"  readonly value="Add to cart"><br/>
                   </form>
                   
                 </div>

@@ -58,7 +58,8 @@ $uniq=$_SERVER['HTTP_USER_AGENT'].$_SERVER['LOCAL_ADDR'].$_SERVER['LOCAL_PORT'].
                   
                   <form action="delete_from_cart.php"  method="post">
                    
-                  	<input id="del"  class="del-goods"  type="submit"  name="btn1" readonly value="<?php echo("$i[0]"); ?>"><br/>
+                    <input type="hidden" name="am" value="<?php echo("$i[0]") ?>">
+                  	<input id="del"  class="del-goods"  type="submit"  name="btn1" readonly ><br/>
                   </form>
                 
                 </li>

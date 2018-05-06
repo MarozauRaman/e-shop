@@ -2,15 +2,14 @@
 $back=$_SERVER['HTTP_REFERER'];
 						  require("connect.php");
 						  
-							$id1=trim($_REQUEST['dobtov']);
-							$id2=trim($_REQUEST['deltov']);
+							$id=trim($_REQUEST['am']);
 
 						 if(isset($_POST["dobtov"])){
 							 
 							 
 							 
-							 $add=mysql($dbName,"update instock set amount='1' where idinstock='{$id1}'");
-	 echo("Товар $id1 Добавлен!");
+							 $add=mysql($dbName,"update instock set amount='1' where idinstock='{$id}'");
+	 echo("Товар $id Добавлен!");
 						 
 							
 						 }
@@ -20,8 +19,8 @@ $back=$_SERVER['HTTP_REFERER'];
 							 
 							 
 						 
-							 $del=mysql($dbName,"update instock set amount='0' where idinstock='{$id2}'");
-	 echo("Товар $id2 Удален!");
+							 $del=mysql($dbName,"update instock set amount='0' where idinstock='{$id}'");
+	 echo("Товар $id Удален!");
 							
 							
 						 }

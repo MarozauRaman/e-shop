@@ -5,7 +5,7 @@ $uniq=$_SERVER['HTTP_USER_AGENT'].$_SERVER['LOCAL_ADDR'].$_SERVER['LOCAL_PORT'].
 $back=$_SERVER['HTTP_REFERER'];
 						  require("connect.php");
 						  
-							(int)$id=trim($_REQUEST['btn']);
+							(int)$id=trim($_REQUEST['am']);
 
 						 if(isset($_POST["btn"])){
 							 	 

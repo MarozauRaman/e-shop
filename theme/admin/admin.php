@@ -68,7 +68,7 @@ include("connect.php");
     <!-- BEGIN HEADER -->
     <div class="header">
       <div class="container">
-        <a class="site-logo" href="shop-index.php"><img src="assets/corporate/img/logos/logo-shop.png"  class="img-thumbnail"></a>
+        <a class="site-logo" href="http://localhost/shop/theme/shop-index.php"><img src="assets/corporate/img/logos/logo-shop.png"  class="img-thumbnail"></a>
 
         <a href="javascript:void(0);" class="mobi-toggler"><em class="fa fa-bars"></em></a>
 
@@ -213,8 +213,9 @@ while($i=mysql_fetch_array($result1,MYSQL_NUM)){
                           	</div>
                  
                   <form action="change.php"  method="post">
-                  <input id="submit"  class="add2cart"  type="submit"  name="deltov" readonly value="<?php echo("$i[0]"); ?>">
-                  <input id="submit"  class="add2cart"  type="submit"  name="dobtov" readonly value="<?php echo("$i[0]"); ?>">
+                      <input type="hidden" name="am" value="<?php echo("$i[0]") ?>">
+                  <input id="submit"  class="add2cart"  type="submit"  name="deltov" readonly value="Удалить">
+                  <input id="submit"  class="add2cart"  type="submit"  name="dobtov" readonly value="Добавить">
                   </form>
             				  
                 </div>
